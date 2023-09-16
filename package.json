@@ -1,5 +1,5 @@
 {
-  "name": "teste-ebac-ui",
+  "name": "exercicio-e2e-ebac-shop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,7 +22,7 @@
   },
   "homepage": "",
   "devDependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^13.2.0"
   },
   "dependencies": {
     "faker": "^5.5.3"

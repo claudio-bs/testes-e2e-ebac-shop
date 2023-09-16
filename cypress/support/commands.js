@@ -31,3 +31,5 @@ Cypress.Commands.add('login', (usuario, senha) => {
     cy.get('.woocommerce-form > .button').click()
 });
 
+//Cypress.Commands.add('addProdutos', ())
+
