@@ -1,0 +1,47 @@
+[
+    {
+        "nome": "Cláudio", 
+        "sobrenome": "Santana", 
+        "empresa": "EBAC", 
+        "pais": "Brasil", 
+        "endereco": "Rua Fulano de Tal, 160", 
+        "complemento": "Bloco 4, AP 202", 
+        "cidade": "Araçatuba", 
+        "estado": "São Paulo", 
+        "cep": "16057-560", 
+        "telefone": "18912345678", 
+        "email": "email@seuemail.com", 
+        "observacao": "Entregar em um condomínio de esquina e de cor azul."
+    },
+
+    {
+        "nome": "João", 
+        "sobrenome": "Santos", 
+        "empresa": "EBAC", 
+        "pais": "Brasil", 
+        "endereco": "Rua Tal de Fulano, 77", 
+        "complemento": "Bloco 4, AP 202", 
+        "cidade": "São José do Rio Preto", 
+        "estado": "São Paulo", 
+        "cep": "12345-678", 
+        "telefone": "1787654321", 
+        "email": "seuemail@email.com", 
+        "observacao": "Entregar em um condomínio fechado e de cor preta."
+    },
+
+    {
+        "nome": "Kleber", 
+        "sobrenome": "Martins", 
+        "empresa": "EBAC", 
+        "pais": "Brasil", 
+        "endereco": "Rua Assim e Assada, 777", 
+        "complemento": "Casa", 
+        "cidade": "Bauru", 
+        "estado": "São Paulo", 
+        "cep": "54321-678", 
+        "telefone": "16852369748", 
+        "email": "email@emailseu.com", 
+        "observacao": "Entregar em uma casa de esquina e de cor verde."
+    }
+
+]
