@@ -21,13 +21,18 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        cy.addProdutos1('Abominable Hoodie', 'L', 'Blue', 2)
-        
-        cy.addProdutos2('Erikssen CoolTech™ Fitness Tank', 'L', 'Red', 5)
-        
-        cy.addProdutos3('Frankie Sweatshirt', 'L', 'White', 3)
 
-        cy.addProdutos4('Hawkeye Yoga Short', '36', 'Black', 10)
+        cy.addProdutos('Erikssen CoolTech™ Fitness Tank', 'L', 'Red', 5)
+        cy.get('.woocommerce-message').should('contain', '5 × “Erikssen CoolTech™ Fitness Tank” foram adicionados no seu carrinho.')
+
+        cy.addProdutos('Frankie Sweatshirt', 'L', 'White', 3)
+        cy.get('.woocommerce-message').contains('3 × “Frankie Sweatshirt” foram adicionados no seu carrinho.')
+
+        cy.addProdutos('Gobi HeatTec® Tee', 'L', 'Black', '8')
+        cy.get('.woocommerce-message').contains('8 × “Gobi HeatTec® Tee” foram adicionados no seu carrinho.')
+
+        cy.addProdutos('Hawkeye Yoga Short', '36', 'Black', 10)
+        cy.get('.woocommerce-message').contains('10 × “Hawkeye Yoga Short” foram adicionados no seu carrinho.')
 
         cy.get('.woocommerce-message > .button').click()
 
