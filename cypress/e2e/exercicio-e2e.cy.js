@@ -31,8 +31,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.addProdutos('Gobi HeatTec® Tee', 'L', 'Black', '8')
         cy.get('.woocommerce-message').contains('8 × “Gobi HeatTec® Tee” foram adicionados no seu carrinho.')
 
-        cy.addProdutos('Hawkeye Yoga Short', '36', 'Black', 10)
-        cy.get('.woocommerce-message').contains('10 × “Hawkeye Yoga Short” foram adicionados no seu carrinho.')
+        cy.addProdutos('Hawkeye Yoga Short', '36', 'Blue', 3)
+        cy.get('.woocommerce-message').contains('3 × “Hawkeye Yoga Short” foram adicionados no seu carrinho.')
 
         cy.get('.woocommerce-message > .button').click()
 
@@ -56,6 +56,8 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('#place_order').click()
 
         cy.get('.woocommerce-notice').contains('Obrigado. Seu pedido foi recebido.')
+
+        cy.get('.woocommerce-order > :nth-child(3)').contains('Pagar em dinheiro na entrega.')
     });
 
 })
