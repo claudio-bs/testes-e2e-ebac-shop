@@ -33,7 +33,7 @@ Cypress.Commands.add('login', (usuario, senha) => {
 
 Cypress.Commands.add('addProdutos', (produto, tamanho,cor, quantidade) => {
     cy.get('#primary-menu > .menu-item-629 > a').click()
-    cy.get(':nth-child(4) > .page-numbers').click()
+    cy.get(':nth-child(6) > .page-numbers').click()
     cy.get('[class="product-block grid"]')
         .contains(produto)
         .click()

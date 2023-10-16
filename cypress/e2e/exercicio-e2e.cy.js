@@ -20,19 +20,19 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.screenshot()
     });
 
-    it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
+    it.only('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
 
-        cy.addProdutos('Erikssen CoolTech™ Fitness Tank', 'L', 'Red', 2)
-        cy.get('.woocommerce-message').should('contain', '2 × “Erikssen CoolTech™ Fitness Tank” foram adicionados no seu carrinho.')
+        cy.addProdutos('Sinbad Fitness Tank', 'L', 'Blue', 2)
+        cy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.')
 
-        cy.addProdutos('Frankie Sweatshirt', 'L', 'White', 3)
-        cy.get('.woocommerce-message').contains('3 × “Frankie Sweatshirt” foram adicionados no seu carrinho.')
+        cy.addProdutos('Sol Active Short', '36', 'Green', 3)
+        cy.get('.woocommerce-message').contains('3 × “Sol Active Short” foram adicionados no seu carrinho.')
 
-        cy.addProdutos('Gobi HeatTec® Tee', 'L', 'Black', 1)
-        cy.get('.woocommerce-message').contains('“Gobi HeatTec® Tee” foi adicionado no seu carrinho.')
+        cy.addProdutos('Sparta Gym Tank', 'L', 'Green', 1)
+        cy.get('.woocommerce-message').contains('“Sparta Gym Tank” foi adicionado no seu carrinho.')
 
-        cy.addProdutos('Hawkeye Yoga Short', '36', 'Blue', 3)
-        cy.get('.woocommerce-message').contains('3 × “Hawkeye Yoga Short” foram adicionados no seu carrinho.')
+        cy.addProdutos('Strike Endurance Tee', 'L', 'Black', 3)
+        cy.get('.woocommerce-message').contains('3 × “Strike Endurance Tee” foram adicionados no seu carrinho.')
 
         cy.get('.woocommerce-message > .button').click()
 
