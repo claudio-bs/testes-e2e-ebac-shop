@@ -20,7 +20,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.screenshot()
     });
 
-    it.only('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
+    it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
 
         cy.addProdutos('Sinbad Fitness Tank', 'L', 'Blue', 2)
         cy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.')
