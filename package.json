@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "faker": "^5.5.3",
-    "faker-br": "^0.4.1"
+    "faker-br": "^0.4.1",
+    "start-server-and-test": "^2.0.1"
   }
 }
