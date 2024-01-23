@@ -19,4 +19,3 @@ pipeline {
         }
     }
 }
-git branch: 'ci-cbs', url: 'https://github.com/claudio-bs/testes-e2e-ebac-shop.git'
