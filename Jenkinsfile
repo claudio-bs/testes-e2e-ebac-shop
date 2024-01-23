@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'npm run cy:run'
+                bat 'NO_COLOR=1 npm run cy:run'
             }
         }
         stage('Deploy') {
