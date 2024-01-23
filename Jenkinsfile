@@ -2,20 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar o repositorio') {
+        stage('Setup') {
             steps {
-                git branch: 'main', url: 'https://github.com/claudio-bs/testes-e2e-ebac-shop.git'
+                sh 'npm install'
             }
         }
-        stage('Instalar as dependencias') {
+        stage('Test') {
             steps {
-                bat 'npm install'
+                sh 'npm run cy:run'
             }
         }
-        stage('Executar Testes') {
+        stage('Deploy') {
             steps {
-                bat 'npm run cy:run'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'EBAC Report', reportTitles: 'mochawesome.html', useWrapperFileDirectly: true])
             }
         }
     }
 }
+git branch: 'ci-cbs', url: 'https://github.com/claudio-bs/testes-e2e-ebac-shop.git'

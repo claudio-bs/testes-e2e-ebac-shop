@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-23T20:24:11.821Z",
+    "end": "2024-01-23T20:24:24.476Z",
+    "duration": 12655,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5b757be0-b3ce-4708-add1-37f70e5641de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+          "title": "Funcionalidade Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com sucesso usando Comando customizado",
+              "fullTitle": "Funcionalidade Login Login com sucesso usando Comando customizado",
+              "timedOut": null,
+              "duration": 5210,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(dadosLogin.usuario, dadosLogin.senha);\ncy.get('.page-title').should('contain', 'Minha conta');",
+              "err": {},
+              "uuid": "258ff9a0-9793-467c-8381-6e0bbb0044fa",
+              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login usando fixture",
+              "fullTitle": "Funcionalidade Login Login usando fixture",
+              "timedOut": null,
+              "duration": 2938,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('perfil').then(dados => {\n  cy.login(dados.usuario, dados.senha);\n});\ncy.get('.page-title').should('contain', 'Minha conta');",
+              "err": {},
+              "uuid": "d3069130-82d4-4c91-90a6-792580bf1e43",
+              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve fazer login com sucesso - sem otimização",
+              "fullTitle": "Funcionalidade Login Deve fazer login com sucesso - sem otimização",
+              "timedOut": null,
+              "duration": 2821,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type(dadosLogin.usuario);\ncy.get('#password').type(dadosLogin.senha, {\n  log: false\n});\ncy.get('.woocommerce-form > .button').click();\ncy.get('.page-title').should('contain', 'Minha conta');\ncy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, aluno_ebac');",
+              "err": {},
+              "uuid": "9714acf1-3b42-4a3f-9994-4efa58566d55",
+              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "258ff9a0-9793-467c-8381-6e0bbb0044fa",
+            "d3069130-82d4-4c91-90a6-792580bf1e43",
+            "9714acf1-3b42-4a3f-9994-4efa58566d55"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10969,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
