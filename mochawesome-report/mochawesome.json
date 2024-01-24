@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-23T20:24:11.821Z",
-    "end": "2024-01-23T20:24:24.476Z",
-    "duration": 12655,
+    "start": "2024-01-24T16:41:55.656Z",
+    "end": "2024-01-24T16:42:09.808Z",
+    "duration": 14152,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5b757be0-b3ce-4708-add1-37f70e5641de",
+      "uuid": "57d77f0a-4469-40b9-bf00-accf84deff3f",
       "title": "",
       "fullFile": "cypress\\e2e\\login.cy.js",
       "file": "cypress\\e2e\\login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+          "uuid": "89d58940-3361-4076-ac1d-3c24e993ef0b",
           "title": "Funcionalidade Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login com sucesso usando Comando customizado",
               "fullTitle": "Funcionalidade Login Login com sucesso usando Comando customizado",
               "timedOut": null,
-              "duration": 5210,
+              "duration": 5292,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.login(dadosLogin.usuario, dadosLogin.senha);\ncy.get('.page-title').should('contain', 'Minha conta');",
               "err": {},
-              "uuid": "258ff9a0-9793-467c-8381-6e0bbb0044fa",
-              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "uuid": "3e10258a-e74e-4280-8915-2922884a1fbe",
+              "parentUUID": "89d58940-3361-4076-ac1d-3c24e993ef0b",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Login usando fixture",
               "fullTitle": "Funcionalidade Login Login usando fixture",
               "timedOut": null,
-              "duration": 2938,
+              "duration": 3634,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.fixture('perfil').then(dados => {\n  cy.login(dados.usuario, dados.senha);\n});\ncy.get('.page-title').should('contain', 'Minha conta');",
               "err": {},
-              "uuid": "d3069130-82d4-4c91-90a6-792580bf1e43",
-              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "uuid": "1b5be91c-e1dc-4996-adba-48fa9603b59b",
+              "parentUUID": "89d58940-3361-4076-ac1d-3c24e993ef0b",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Deve fazer login com sucesso - sem otimização",
               "fullTitle": "Funcionalidade Login Deve fazer login com sucesso - sem otimização",
               "timedOut": null,
-              "duration": 2821,
+              "duration": 3104,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('#username').type(dadosLogin.usuario);\ncy.get('#password').type(dadosLogin.senha, {\n  log: false\n});\ncy.get('.woocommerce-form > .button').click();\ncy.get('.page-title').should('contain', 'Minha conta');\ncy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, aluno_ebac');",
               "err": {},
-              "uuid": "9714acf1-3b42-4a3f-9994-4efa58566d55",
-              "parentUUID": "bdc1389b-aabd-4ec2-8fa2-29741d21a5dc",
+              "uuid": "cc2f8ecf-6dc4-4d57-9996-9f1c04e40d09",
+              "parentUUID": "89d58940-3361-4076-ac1d-3c24e993ef0b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "258ff9a0-9793-467c-8381-6e0bbb0044fa",
-            "d3069130-82d4-4c91-90a6-792580bf1e43",
-            "9714acf1-3b42-4a3f-9994-4efa58566d55"
+            "3e10258a-e74e-4280-8915-2922884a1fbe",
+            "1b5be91c-e1dc-4996-adba-48fa9603b59b",
+            "cc2f8ecf-6dc4-4d57-9996-9f1c04e40d09"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10969,
+          "duration": 12030,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
