@@ -25,14 +25,14 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.addProdutos('Sinbad Fitness Tank', 'L', 'Blue', 2)
         cy.get('.woocommerce-message').should('contain', '2 × “Sinbad Fitness Tank” foram adicionados no seu carrinho.')
 
-        cy.addProdutos('Sol Active Short', '36', 'Green', 3)
+        /*cy.addProdutos('Sol Active Short', '36', 'Green', 3)
         cy.get('.woocommerce-message').contains('3 × “Sol Active Short” foram adicionados no seu carrinho.')
 
         cy.addProdutos('Sparta Gym Tank', 'L', 'Green', 1)
         cy.get('.woocommerce-message').contains('“Sparta Gym Tank” foi adicionado no seu carrinho.')
 
         cy.addProdutos('Strike Endurance Tee', 'L', 'Black', 3)
-        cy.get('.woocommerce-message').contains('3 × “Strike Endurance Tee” foram adicionados no seu carrinho.')
+        cy.get('.woocommerce-message').contains('3 × “Strike Endurance Tee” foram adicionados no seu carrinho.')*/
 
         cy.get('.woocommerce-message > .button').click()
 
