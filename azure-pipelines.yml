@@ -8,7 +8,7 @@ steps:
 - task: NodeTool@0
   displayName: "Setup"
   inputs:
-    versionSpec: '12.x'
+    versionSpec: '20.x'
 - script: 'npm install'
   displayName: "Instala dependências"
 
